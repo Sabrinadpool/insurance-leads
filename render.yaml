@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: insurance-leads
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: META_VERIFY_TOKEN
+        sync: false
+      - key: META_APP_SECRET
+        sync: false
+      - key: META_ACCESS_TOKEN
+        sync: false
+      - key: META_PAGE_ID
+        sync: false
+      - key: GHL_API_KEY
+        sync: false
+      - key: GHL_LOCATION_ID
+        sync: false
+      - key: GHL_AGENT_IDS
+        sync: false
+      - key: GHL_AGENT_PHONES
+        sync: false
+      - key: GHL_SMS_FROM_NUMBER_ID
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
