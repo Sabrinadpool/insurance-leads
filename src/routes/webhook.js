@@ -73,6 +73,7 @@ async function processLead(leadId) {
   await upsertContact(lead, agentId, scoreResult.score);
 
   logger.info('[pipeline] complete', { leadId, score: scoreResult.score });
+}
 
 // ─── Middleware ───────────────────────────────────────────────────────────────
 
